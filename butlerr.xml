@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Butlerr</Name>
+  <Repository>velun/butlerr</Repository>
+  <Registry>https://hub.docker.com/r/velun/butlerr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/126124-support-butlerr-docker-template</Support>
+  <Project>https://github.com/fireitsoft/butlerr</Project>
+  <Overview>Butlerr is your private butler in Discord for your media server(s). Let the butler do all the hard work and keep track of the users for you on your media server while you just manage things in Discord. The bot handles the invites (by roles or added manually), expiring invites, creating users, removing users, removing roles,etc</Overview>
+  <Category>HomeAutomation: Tools: Other: MediaApp:Other MediaServer:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/fireitsoft/Butlerr/master/favicon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Butlerr is your private butler in Discord for your media server(s). Let the butler do all the hard work and keep track of the users for you on your media server while you just manage things in Discord. The bot handles the invites (by roles or added manually), expiring invites, creating users, removing users, removing roles,etc</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/butlerr/</HostDir>
+      <ContainerDir>/app/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>token</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Discord Bot Token" Target="token" Default="" Mode="" Description="Discord Bot Token" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Config" Target="/app/app/config" Default="/mnt/user/appdata/butlerr/" Mode="rw" Description="Config path (containing app.db and config.ini)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/butlerr/</Config>
+</Container>
